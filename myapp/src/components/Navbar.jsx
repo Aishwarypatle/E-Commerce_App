@@ -5,6 +5,8 @@ import {Badge} from '@mui/material'
 
 const Container = styled.div`
         height:100px;
+        margin-top: 5px;
+        
 `
 
 const Language = styled.span`
@@ -16,12 +18,14 @@ const SearchContainer = styled.div`
     border: 2px solid lightgrey;
     display:flex;
     align-items:center;
-    margin-left:25px;
+    margin-left:15px;
     padding:5px;
+    max-width: 60%;
 `
 
 const Input = styled.input`
     border: none;
+    max-width: 80%;
 `
 
 const Logo = styled.h1`
@@ -32,6 +36,7 @@ const Wrapper = styled.div`
     padding:10px 20px;
     display:flex;
     justify-content:space-between;
+    flex-wrap: wrap;
 `
 const Left = styled.div`
     flex:1;
@@ -43,9 +48,11 @@ const Center = styled.div`
     `
 const Right = styled.div`
     flex:1;
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-top: 5px;
 `
 const MenuItem =styled.div`
     font-size:14px ;

@@ -10,11 +10,12 @@ const Container = styled.div`
     font-weight: 500;
     color: white;
     height: 30px;
+    width: 100%;
     `
 const Annoucement = () => {
   return (
     <Container>
-       Aishwary  Hurrray ! $50 off on any item above $500 > 
+       Hurrray ! $50 off on any item above $500  
     </Container>
   )
   }
