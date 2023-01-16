@@ -14,7 +14,7 @@ const Container = styled.div`
 const Annoucement = () => {
   return (
     <Container>
-        Hurrray ! $50 off on any item above $500 > 
+       Aishwary  Hurrray ! $50 off on any item above $500 > 
     </Container>
   )
   }
