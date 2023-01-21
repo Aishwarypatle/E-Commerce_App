@@ -59,7 +59,7 @@ const Slider = () => {
             <Wrapper>
                 <Slide>
                     <ImageContainer>
-                        <Image src={Pic1}/>
+                       <Image src={Pic1} />
                     </ImageContainer>
                     <InfoContainer></InfoContainer>
                 </Slide>
