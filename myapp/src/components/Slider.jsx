@@ -1,8 +1,7 @@
 import React from 'react'
 import { ArrowLeftOutlined,ArrowRightOutlined } from '@mui/icons-material'
 import styled from 'styled-components'
-import Pic1 from '../images/mypic.jpg'
-
+import Pic from "../images/business.jpg"
 const Container = styled.div`
     display: flex;
     height: 100vh;
@@ -21,8 +20,8 @@ const Arrow = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: ${props=> props.direction==="left" && "10px"};
-    right: ${props=> props.direction==="right" && "10px"};
+    left: ${(props) => props.direction ==="left" && "10px"};
+    right: ${(props)=> props.direction ==="right" && "10px"};
     margin: auto;
     cursor: pointer;
     opacity: 0.5;
@@ -41,12 +40,15 @@ const ImageContainer = styled.div`
     flex: 1;
     height: 100%;
 `
-const Image = styled.div`
-    height: 80%;
-`
+// const Image = styled.div`
+//     height: 80%;
+// `
 const InfoContainer = styled.div`
     flex: 1;
     padding: 50px;
+`
+const Title  = styled.h1`
+    
 `
 
 
@@ -59,7 +61,7 @@ const Slider = () => {
             <Wrapper>
                 <Slide>
                     <ImageContainer>
-                       <Image src={Pic1} />
+                       <img style={{height:'80%'}} src={Pic} alt='im'></img>
                     </ImageContainer>
                     <InfoContainer></InfoContainer>
                 </Slide>
