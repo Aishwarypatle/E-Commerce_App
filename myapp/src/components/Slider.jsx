@@ -1,7 +1,8 @@
 import React from 'react'
 import { ArrowLeftOutlined,ArrowRightOutlined } from '@mui/icons-material'
 import styled from 'styled-components'
-import sliderData from "../data"
+import {sliderData} from "../data"
+import { useState } from 'react'
 
 
 const Container = styled.div`
@@ -33,7 +34,7 @@ const Arrow = styled.div`
 
 const Wrapper = styled.div`
     height: 100%;
-    transform: translateX(0vw);
+    transform: translateX(${(props) => props.transformIndex * -100}vw);
     display: flex;
 `
 const Slide = styled.div`
@@ -41,7 +42,7 @@ const Slide = styled.div`
     width: 100vw;
     display: flex;
     align-items: center;    
-    background-color: #${props=>props.bg};
+    background-color: #${(props) => props.bg};
 `
 const ImageContainer = styled.div`
     flex: 1;
@@ -75,9 +76,19 @@ const Button  = styled.button`
 
 
 const Slider = () => {
-    const handleClick = () =>
-    {
 
+    const [transformIndex , setTransformIndex] = useState(0)
+
+    const handleClick = (direction) =>
+    {
+        if(direction==='left')
+        {
+            setTransformIndex(transformIndex > 0 ? transformIndex - 1 : 2)
+        }
+        else
+        {
+            setTransformIndex(transformIndex < 2 ? transformIndex + 1 : 0)
+        }
     }
 
   return (
@@ -87,15 +98,15 @@ const Slider = () => {
         </Arrow>
         {
             sliderData.map((item)=>(
-            <Wrapper>
+            <Wrapper transformIndex={transformIndex}>
                 <Slide bg={item.bg}>
                     <ImageContainer>
-                       <img style={{height:'80%'}} src={item.image} alt='im'></img>
+                       <img style={{maxHeight:'80%'}} src={item.image} alt='im'></img>
                     </ImageContainer>
                     <InfoContainer>
                         <Title>{item.title}</Title>
                         <Desc>{item.description}</Desc>
-                        <Button>{item.}</Button>
+                        <Button>SHOW NOW</Button>
                     </InfoContainer>
                 </Slide>
             </Wrapper>
