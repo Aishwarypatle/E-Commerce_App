@@ -34,6 +34,7 @@ const Arrow = styled.div`
 
 const Wrapper = styled.div`
     height: 100%;
+    transition: all 1.5s ease;
     transform: translateX(${(props) => props.transformIndex * -100}vw);
     display: flex;
 `
@@ -97,15 +98,15 @@ const Slider = () => {
             <ArrowLeftOutlined/>
         </Arrow>
         {
-            sliderData.map((item)=>(
+            sliderData.map((data)=>(
             <Wrapper transformIndex={transformIndex}>
-                <Slide bg={item.bg}>
+                <Slide bg={data.bg}>
                     <ImageContainer>
-                       <img style={{maxHeight:'80%'}} src={item.image} alt='im'></img>
+                       <img  src={data.image} alt='im'></img>
                     </ImageContainer>
                     <InfoContainer>
-                        <Title>{item.title}</Title>
-                        <Desc>{item.description}</Desc>
+                        <Title>{data.title}</Title>
+                        <Desc>{data.description}</Desc>
                         <Button>SHOW NOW</Button>
                     </InfoContainer>
                 </Slide>
