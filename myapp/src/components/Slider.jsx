@@ -100,7 +100,7 @@ const Slider = () => {
         {
             sliderData.map((data)=>(
             <Wrapper transformIndex={transformIndex}>
-                <Slide bg={data.bg}>
+                <Slide bg={data.bg} key={data.id}>
                     <ImageContainer>
                        <img  src={data.image} alt='im'></img>
                     </ImageContainer>

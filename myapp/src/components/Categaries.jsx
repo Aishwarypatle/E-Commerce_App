@@ -15,7 +15,7 @@ const Categaries = () => {
       <Container>
           {
             categoriesData.map((item) =>(
-              <CategaryItem item={item} />
+              <CategaryItem item={item} key={item.id} />
           ))}
       </Container>
     </>

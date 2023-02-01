@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar'
 import Annoucement from '../components/Annoucement'
 import Slider from '../components/Slider'
 import Categaries from '../components/Categaries'
+import Products from '../components/Products'
+import Newsletter from '../components/Newsletter'
 
 
 const Home = () => {
@@ -12,6 +14,8 @@ const Home = () => {
         <Navbar />
         <Slider/>
         <Categaries/>
+        <Products/>
+        <Newsletter />
     </div>
   )
 }
